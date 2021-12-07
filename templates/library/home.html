@@ -1,0 +1,44 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+	
+	<div class="container">		
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		  <strong>Добро пожаловать в библиотеку AIL дорогой читатель! </strong>
+		  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="row gy-2">
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <img id="winner_img" src="{{ winner.photo.url }}" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title" id="winner_text">{{ winner.description }}</h5>
+				    <p class="card-text" id="winner_text">{{ winner.name }}</p>
+				  </div>
+				</div>		
+			</div>
+			<div class="col">
+				<a href="{{ book_of_the_week.url }}" style="text-decoration: none;">
+				<div class="card" style="width: 18rem;">
+				  <img id="winner_img" src="{{ book_of_the_week.photo }}" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title" id="winner_text">{{ book_of_the_week.description }}</h5>
+				    <p class="card-text" id="winner_text">{{ book_of_the_week.name }}</p>
+				  </div>
+				</div>
+				</a>	
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img id="winner_img" src="../media/media/main_book.gif" class="card-img-top" alt="...">
+					<div class="card-body">
+				    <h5 class="card-title" id="winner_text">Общее количество книг в нашей библиотеке</h5>
+				    <p class="card-text" id="winner_text">{{ count }}</p>
+				  </div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	
+{% endblock content %}
+

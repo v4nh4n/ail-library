@@ -1,0 +1,39 @@
+#winner {
+	 width: 100px; 
+	 height: 100px;
+}
+
+#book {
+	width: 300px;
+	height: 300px;
+}
+
+
+.card {
+	background-color: #85008e;
+}
+
+#winner_text {
+	color: #ccccff;
+	font-weight: bold;
+	text-align: center;
+}
+
+#winner_img {
+	width: 17.9rem;
+	height: 300px;
+}
+
+#list_books_img {
+	height: 150px;	
+}
+
+#list_books_text {
+	color: #ccccff;
+	font-weight: bold;
+	text-align: center;
+	/*white-space: nowrap;*/
+  /*overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;*/
+}

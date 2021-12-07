@@ -1,0 +1,21 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+	
+	<div class="container">
+		<div class="row gy-3">
+			<div class="col-lg-4">
+				<h5>{{ recommended_book.name }}</h5>
+				<img src="{{ recommended_book.photo }}" id="book">
+				<p>Добавлен: {{ recommended_book.created_by }}</p>
+				<p>{{ recommended_book.created_at }}</p>		
+			</div>
+			<div class="col">
+				<h5>Описание:</h5>
+				<p>{{ recommended_book.description }}</p>
+				<a href="{{ recommended_book.url }}">Скачать/Читать</a>
+			</div>
+		</div>		
+	</div>
+
+{% endblock content %}

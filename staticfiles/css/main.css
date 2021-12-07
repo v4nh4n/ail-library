@@ -1,0 +1,13 @@
+#winner {
+	 width: 100px; 
+	 height: 100px;
+}
+
+#book {
+	width: 150px;
+	height: 150px;
+}
+
+body {
+	background-color: green;
+}

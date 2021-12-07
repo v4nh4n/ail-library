@@ -1,0 +1,24 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+<center>
+
+	{% if searched %}
+		<h3>Вы искали {{ searched }}</h3>
+		<ul class="list-group">
+		{% for b in book %}
+			<li class="list-group-item"><a href="{% url 'show_book' b.id %}">{{ b }}</a></li>
+		{% endfor %}
+		{% for ab in ail_book %}
+			<li class="list-group-item"><a href="{% url 'show_ail_book' ab.id %}">{{ ab }}</a></li>
+		{% endfor %}
+		{% for r in recommended_book %}
+			<li class="list-group-item"><a href="{% url 'show_recommended_book' r.id %}">{{ r }}</a></li>
+		{% endfor %}
+		</ul>	
+	{% else %}
+		<h3>Хей вы забыли написать название книги...</h3>
+	{% endif %}
+
+</center>
+{% endblock content %}
